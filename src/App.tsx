@@ -11,7 +11,7 @@ import {
   ExternalLink,
   ChevronLeft
 } from 'lucide-react';
-import React, { useState } from 'react';
+import React from 'react';
 
 const apps = [
   {
@@ -174,7 +174,6 @@ function DashboardHome() {
 function AppViewer() {
   const location = useLocation();
   const app = apps.find(a => a.path === location.pathname);
-  const [iframeError, setIframeError] = useState(false);
 
   if (!app) return <div>App not found</div>;
 
