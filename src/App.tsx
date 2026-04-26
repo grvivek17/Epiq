@@ -183,14 +183,12 @@ function AppViewer() {
         <ChevronLeft size={16} /> Back to Dashboard
       </Link>
       
-      {(app.id === 'crm' || app.id === 'crm-v2') && (
-        <div className="iframe-notice">
-            <p style={{ marginBottom: 12 }}>Some applications restrict embedding due to security policies (X-Frame-Options).</p>
-            <a href={app.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Open {app.name} in New Tab <ExternalLink size={16} />
-            </a>
-        </div>
-      )}
+      <div className="iframe-notice">
+          <p style={{ marginBottom: 12 }}>If the application fails to load or restricts embedding, you can open it directly.</p>
+          <a href={app.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Open {app.name} in New Tab <ExternalLink size={16} />
+          </a>
+      </div>
       
       <div className="iframe-container">
         <iframe 
